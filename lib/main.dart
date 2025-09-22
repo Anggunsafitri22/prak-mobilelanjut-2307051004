@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/basic_widget.dart';
-// kalau mau coba yang lain bisa ganti jadi column_widget.dart atau row_widget.dart
+import 'screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Praktikum Mobile Lanjut',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Login Register',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const BasicWidget(),
+      home: const LoginScreen(),
     );
   }
 }
