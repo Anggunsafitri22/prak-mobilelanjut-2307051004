@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Logo + Judul
               Center(
                 child: Column(
                   children: [
@@ -33,11 +34,15 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
+
+              // Welcome Text
               const Text(
                 "Hi, Welcome Back to Justduit",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 20),
+
+              // Email Field
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Email Address",
@@ -50,6 +55,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
+
+              // Password Field
               TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -63,6 +70,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
+
+              // Forgot Password
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -71,6 +80,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
+
+              // Sign In Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -81,7 +92,10 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    // Navigasi ke dashboard
+                    Navigator.pushNamed(context, '/dashboard');
+                  },
                   child: const Text(
                     "Sign in Now",
                     style: TextStyle(fontSize: 16, color: Colors.white),
@@ -89,6 +103,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+
+              // Signup Text
               Center(
                 child: TextButton(
                   onPressed: () {
